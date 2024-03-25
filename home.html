@@ -1,0 +1,86 @@
+
+<!--#include virtual="common/head.html" -->
+<body>
+<!--#include virtual="common/nav.html" -->
+<!--#include virtual="common/age_ver_modal.html" -->
+
+<section class="section">
+    <div class="row">
+        <div class="col l6 m6 s12">
+            <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="images/background/castle.jpg" > <!-- Image 1 -->
+              <div class="caption center-align">
+                <h3>Experience Trinity</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan for Image 1.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="images/background/convo_point.JPG"> <!-- Image 2 -->
+              <div class="caption left-align">
+                <h3>Family Owned</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan for Image 2.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="images/background/road_sheep.jpg"> <!-- Image 3 -->
+              <div class="caption right-align">
+                <h3>Sheep not included</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan for Image 3.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="images/background/farm_pen.JPG"> <!-- Image 4 -->
+              <div class="caption center-align">
+                <h3>Farm to table!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan for Image 4.</h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col l6 m6 s12">
+        <!-- Container for first image -->
+        <div class="image-container">
+            <img src="images/founders/family.JPG" class="responsive-img slide-image">
+        </div>
+    </div>
+    <div class="col l6 m6 s12">
+        <!-- Container for second image -->
+        <div class="image-container">
+            <img src="images/founders/headshot.jpeg" class="responsive-img slide-image">
+        </div>
+    </div>
+  </section>
+  
+
+<!--#include virtual="common/footer.html" -->
+
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/age_verification.js"></script>
+    <script src="js/search_anim.js"></script>
+    <script src="js/nav_scroll_appear.js"></script>
+    <script src="js/home_slider.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav({ edge: 'right' });
+            $('.dropdown-trigger').dropdown();
+            $('.collapsible').collapsible();
+            $('.tap-target').tapTarget();
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.pushpin').pushpin();
+            $('.scrollspy').scrollSpy();
+            $('.tabs').tabs();
+            $('.tooltipped').tooltip();
+        });
+    </script>
+
+</body>
+
+</html>
