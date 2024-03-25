@@ -1,0 +1,473 @@
+/* IAS_styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    max-width: 100%;
+    overflow-x: hidden; /* Optional: Hide horizontal scrollbar */
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+@font-face {
+    font-family: 'Immi O Five Std Regular';
+    src: url('../fonts/Immi_Five_O_Five_Std_Regular.otf') format('opentype'),
+/* include other types here woff woff2 etc */
+}
+
+.section {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right:0;
+  }
+
+  .image-container {
+    height: 250px; /* Adjust the height as needed */
+    overflow: hidden; /* Ensure image does not overflow container */
+}
+
+.image-container img {
+    width: 100%; /* Ensure image stretches to fill container width */
+    height: auto; /* Allow image to maintain aspect ratio */
+}
+
+
+nav i.material-symbols-outlined {
+    color: #000000;
+    /* Black text */
+    line-height: 64px;
+    height: 64px;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: rgb(255, 255, 255); /* Adjust the alpha value (0.5) as needed */
+    /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    /* Shadow effect */
+    line-height: 64px;
+    height: 64px;
+} 
+
+
+nav .brand-logo1 {
+    background-image: url('../images/logos/IASLogo1_no_bg.jpg'); 
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    white-space-collapse:collapse;
+    width: 25%; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    display:flexbox;
+    margin-left: 1%;
+    cursor:pointer;
+  /* text-indent: -100px; /* Hide the text */
+}
+
+nav .brand-logo2 {
+    background-image: url('../images/logos/IASLogo2_no_bg.jpg');
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    white-space-collapse:collapse;
+    width: 16%; /* Adjust the width as needed */
+    height:100%; /* Adjust the height as needed */
+    display:flexbox;
+    line-height: 2%;
+    cursor:pointer;
+      /* text-indent: -100px; /* Hide the text */
+}
+
+nav ul a {
+    color: #000000;
+    /* Black text */
+    line-height: 64px;
+    height: 64px;
+}
+
+
+/* Center-align the list items */
+nav ul li.center-align {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ensure vertical alignment */
+nav ul li.center-align a {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust spacing for right-aligned items */
+nav ul li.right {
+    margin-left: auto;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    margin:0;
+}
+
+nav #topnav-list-search {
+    height: 64px;
+}
+
+#topnav-form {
+    height: 64px;
+}
+
+#topnav-form-div {
+    padding-top: 16px; /* Adjust top padding */
+    padding-bottom: 16px; /* Adjust bottom padding */
+    padding-right:8px;
+    padding-left:8px;
+    box-sizing: border-box; /* Include padding and border in total width and height */
+}
+
+#topnav-form-input {
+    height: 32px;
+    width: calc(100% - 5rem);
+    padding-left: 2rem;
+    padding-right: 4rem;
+    transition: width 0.5s ease, border-color 0.5s ease; /* Include border-color transition */
+    width: 1px; /* Initial width of the search input */
+    border: 2px solid black; /* Add black border */
+    box-sizing: border-box; /* Include padding and border in total width and height */
+    position:relative;
+    border-radius: 25px; /* Rounded corners */
+
+}
+
+#topnav-form-input::placeholder {
+    text-align: left;
+}
+
+#topnav-form-input::before,
+#topnav-form-input::after {
+    content: '';
+    position: absolute;
+    height: 100%; /* Cover the entire height of the input field */
+    top: -2px; /* Offset from top by border thickness */
+    width: 10px; /* Adjust as needed */
+    height: calc(100% + 4px); /* Adjust to cover top border */
+    background: black; /* Background color same as border */
+    border-radius: 50%; /* Make the ends circular */
+    z-index: -1; /* Ensure the pseudo-elements are behind the input */
+
+}
+
+#topnav-form-input::before {
+    left: -10px; /* Position before the input */
+    height: 50%; /* Half of the input height */
+
+}
+
+#topnav-form-input::after {
+    right: -10px; /* Position after the input */
+    height: 50%; /* Half of the input height */
+
+}
+
+#topnav-form-input.expanded {
+    width: 250px; /* Expanded width of the search input */
+}
+
+
+.input-field input[type=search] ~ .mdi-navigation-close, .input-field input[type=search] ~ .material-icons {
+    color:#000000;
+}
+
+#topnav-close-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Include width transition */
+    height: 64px;
+    right:3.5rem;
+    z-index: -1;
+    pointer-events:none; /*initially not clickable */
+}
+
+#topnav-form-input.expanded ~ #topnav-close-search {
+    opacity: 1; /* Always visible when text area is expanded */
+    z-index:2;
+    pointer-events: auto; /*clickable when text area is expanded */
+}
+
+
+#topnav-close-search.expanded {
+    opacity: 1;
+    z-index: 1; /* Elevate z-index to top */
+    right:3.5rem;
+    /* width: 0; /* Reset width when de-expanding */
+    pointer-events: auto;
+
+}
+
+#topnav-close-search.expanded,
+#topnav-form-input.expanded ~ #topnav-close-search {
+    opacity: 1;
+    z-index: 1; /* Elevate z-index to top */
+    right:3.5rem;
+}
+
+#topnav-input-label {
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    right: 0rem;
+    z-index: 1; /* Ensure the input label is above the close icon */
+}
+
+#topnav-search-icon {
+    height:64px;
+    color:black;
+    display:inline;
+    position:absolute;
+    right:1rem;
+    z-index: 1; /* Ensure the input label is above the close icon */
+}
+
+
+.input-field input[type=search] ~ .mdi-navigation-close, .input-field input[type=search] ~ .material-icons {
+    position: absolute;
+    right: 1rem;
+    height:inherit;
+    z-index: 1; /* Ensure the clear icon is above the close icon */
+}
+
+nav .input-field>label{
+    height: 64px;
+    position:absolute;
+    left:100%;
+    cursor:text;
+}
+#nav-mobile ul a {
+    color:#000000 ;
+}
+#nav-mobile li {
+    color: #000000;
+}
+
+#nav-mobile img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 100%; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    display:flexbox;
+    margin-top: 0;
+  /* text-indent: -100px; /* Hide the text */
+}
+
+/* Footer Styles */
+#page-footer {
+    background-color: #3E745D;
+    color: #ffffff;
+    /* White text */
+}
+#page-footer img {
+    width: 25%; /* Adjust the width as needed */
+    height: inherit; /* Adjust the height as needed */
+    display:flexbox;
+    margin:0;
+
+}
+
+.footer-copyright{
+    display: inline;
+    align-items: center;
+    height:min-content;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+    margin-top: auto;
+}
+
+#footer-terms {
+    font-size:smaller;
+    text-align:center;
+    text-decoration: underline;
+    cursor:pointer;
+    height:min-content;
+}
+
+#footer-drink-message {
+    font-family: "Immi O Five Std Regular";
+    font-size: small;
+    text-align:center;
+    height:min-content;
+}
+
+.input-field {
+    align-items: center;
+    align-content: center;
+}
+
+.input-field label {
+    text-align: center;
+}
+
+.input-field ::placeholder {
+    text-align: center;
+}
+
+/* Age Verification Modal Styles */
+#age-verification-modal {
+    max-width:max-content*1.95;
+    /* Set the maximum width of the modal to the widest element inside it */
+    max-height: max-content*1.5;
+    margin: auto;
+    padding: 0.1%;
+    /* Add padding to the modal content */
+    background-color: #ffffffe1;
+    /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 5);
+    /* Shadow effect */
+    position: absolute;
+    z-index: 5;
+    top: 5;
+    align-items: center;
+    text-align:center;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: hidden; /* Optional: Hide horizontal scrollbar */
+    overflow-y: hidden;
+
+}
+
+#age-verification-modal img {
+    background-size: contain;
+    width: 25%; /* Adjust the width as needed */
+    height: inherit; /* Adjust the height as needed */
+    display:flexbox;
+    margin:0;
+
+}
+
+#age-verification-modal h4 {
+    margin-top: 0;
+    /* Remove top margin */
+    color: #3E745D;
+    align-items: center;
+    font-family: 'Immi O Five Std Regular', sans-serif;
+    font-weight: lighter;
+
+}
+
+#age-verification-modal h6 {
+    color: #000000;
+}
+
+#age-verification-modal p {
+    margin: 0;
+    /* Remove top margin */
+    color: #3E745D;
+    align-items: center;
+    text-align:center;
+}
+
+#age-verification-modal p a {
+    margin: 0;
+    /* Remove top margin */
+    color: #3E745D;
+    text-decoration: underline;
+}
+
+#age-verification-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+}
+
+#age-verification-modal .input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    justify-content: center;
+}
+
+
+#age-verification-modal button {
+    width: 60%;
+    /* Set the width of the button */
+    padding: 5px;
+    /* Add padding to the button */
+    background-color: #3E745D;
+    /* Teal background */
+    color: #ffffff;
+    /* White text */
+    border:#000000 ;
+    /* Remove border */
+    border-radius: 10px;
+    /* Add border radius to the button */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    justify-content: center;
+    text-align: center;
+    /* Center the text within the button */
+    line-height: 0; /* Adjust the line-height as needed */
+
+}
+
+#age-verification-modal button:disabled {
+    background-color: #cccccc;
+    /* Gray background for disabled button */
+    color: #ffffff;
+    /* White text for disabled button */
+    cursor: not-allowed;
+    /* Change cursor to not-allowed */
+}
+
+#age-verification-modal button.pulse {
+    animation: pulse 3s infinite;
+    /* Add pulse animation to the button */
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Adjust the padding as needed */
+    text-align: center;
+    /* Center the text within the button */
+    line-height: 6; /* Adjust the line-height as needed */
+    scale:3;
+    color:#3E745D;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+
+}
+
+
